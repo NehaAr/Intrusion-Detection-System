@@ -1,0 +1,27 @@
+"dst_host_serror_rate",
+"dst_host_srv_serror_rate",
+"dst_host_rerror_rate",
+"dst_host_srv_rerror_rate",
+"attacks",
+"attack_label")
+head(data)
+data1<-read.csv("C:/Users/neha.neh/Downloads/NSL_KDD-master/NSL_KDD-master/Attack Types.csv")
+colnames(data1)<-c("attacks","Class")
+inner<-merge(data1,data,by.x="attacks")
+head(inner)
+library("synthpop")
+syn(inner , seed=100)
+write.csv(inner,"inner.csv")
+synthetic_data<-syn(inner , seed=100)
+head(synthetic_data)
+str(inner)
+history()
+head(inner[7])
+inner.pca<-prcomp(inner[,c(7:43)] , center=TRUE , scale=TRUE)
+dime(inner)
+dim(inner)
+inner.pca<-prcomp(inner[,c(7:44)] , center=TRUE , scale=TRUE)
+inner.pca<-prcomp(inner[,c(7:44)] , center=TRUE)
+inner.pca
+history()
+

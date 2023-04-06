@@ -1,0 +1,27 @@
+cm
+classifier_knn <- knn(train = train_cl,
+                      test = test_cl,
+                      cl = train_cl$Class,
+                      k = 1)
+classifier_knn <- knn(train = train_cl,
+                      test = test_cl,
+                      cl = train_cl$Class,
+                      k = 3)
+cm <- table(test_cl$Class, classifier_knn)
+cm
+misClassError <- mean(classifier_knn != test_cl$Class)
+print(paste('Accuracy =', 1-misClassError))
+classifier_knn <- knn(train = train_cl,
+                      test = test_cl,
+                      cl = train_cl$Class,
+                      k = 1)
+cm <- table(test_cl$Class, classifier_knn)
+cmm
+cm
+misClassError <- mean(classifier_knn != test_cl$Class)
+print(paste('Accuracy =', 1-misClassError))
+sensitivity(cm)
+misClassError 
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin/inner.csv")
+history()
+

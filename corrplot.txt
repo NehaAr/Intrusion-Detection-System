@@ -1,0 +1,27 @@
+inner.pca
+history()
+inner.pca<-prcomp(inner[,c(7:44)] , center=TRUE , scale=FALSE)
+inner.pca
+summary(inner)
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin")
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin/inner.csv")
+cor(data_preprocessed[,7:28], use="complete.obs")
+cor(data_preprocessed[,8:28], use="complete.obs")
+correlation<-cor(data_preprocessed[,8:28], use="complete.obs")
+ggcorrplot(correlation)
+install.packages("ggcorrplot")
+library("ggcorrplot")
+library("ggcorrplot")
+ggcorrplot(correlation)
+cor(data_preprocessed[,8:28], use="complete.obs")
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin/inner.csv")
+cor(data_preprocessed[,8:28], use="complete.obs")
+ggcorrplot(correlation)
+ggcorrplot(correlation)
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin/inner.csv")
+data_preprocessed<-read.csv("C:/Users/neha.neh/Documents/R/R-4.0.5/bin/inner.csv")
+g<-cor(data_preprocessed[,8:28], use="complete.obs")
+g
+ggcorrplot(g)
+history()
+

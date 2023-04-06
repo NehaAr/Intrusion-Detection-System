@@ -1,0 +1,27 @@
+data_preprocessed$IDS<-encode_ordinal(data_preprocessed$IDS)
+data_preprocessed$protocol_type<-encode_ordinal(data_preprocessed$protocol_type)
+data_preprocessed$flag<-encode_ordinal(data_preprocessed$flag)
+data_preprocessed$service<-encode_ordinal(data_preprocessed$service)
+data_preprocessed$attacks<-encode_ordinal(data_preprocessed$attacks)
+classifier_knn <- knn(train = train_cl,
+                      test = test_cl,
+                      cl = train_cl$IDS,
+                      k = 1)split <- sample.split(data_preprocessed, SplitRatio = 0.7)
+train_cl <- subset(data_preprocessed, split == "TRUE")
+test_cl <- subset(data_preprocessed, split == "FALSE")
+split <- sample.split(data_preprocessed, SplitRatio = 0.7)
+train_cl <- subset(data_preprocessed, split == "TRUE")
+test_cl <- subset(data_preprocessed, split == "FALSE")
+classifier_knn <- knn(train = train_cl,
+                      test = test_cl,
+                      cl = train_cl$IDS,
+                      k = 1)
+cm <- table(test_cl$IDS, classifier_knn)
+cm
+dim(new_data)
+dim(inner)
+dim(data_preprocessed))
+dim(data_preprocessed)
+dim(incremental_data)
+history()
+
